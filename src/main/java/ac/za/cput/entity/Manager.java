@@ -110,6 +110,11 @@ public class Manager {
             this.lastName = lastName;
             return this;
         }
+        public Manager build() {
+            return new Manager(this);
+        }
+
     }
 }
+
 

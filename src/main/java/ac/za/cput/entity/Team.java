@@ -123,8 +123,12 @@ public class Team {
             this.players = players;
             return this;
         }
+        public Team build() {
+            return new Team (this);
+        }
     }
 }
+
 
 
 
