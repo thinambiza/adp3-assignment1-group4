@@ -22,6 +22,5 @@ public class ManagerFactory {
                 .setMiddleName(middleName)
                 .setLastName(lastName)
                 .build();
-
     }
 }
