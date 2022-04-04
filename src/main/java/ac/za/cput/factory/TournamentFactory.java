@@ -8,7 +8,6 @@
 package ac.za.cput.factory;
 
 
-import ac.za.cput.entity.InGameStats;
 import ac.za.cput.entity.Tournament;
 
 public class TournamentFactory {
