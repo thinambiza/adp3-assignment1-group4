@@ -1,5 +1,5 @@
 /*
- playerStats.java
+ PlayerStats.java
  Entity for the PlayerStats
  Author: Zuko Fukula (217299911)
  Date: 31 March 2022
@@ -7,7 +7,7 @@
 
 package ac.za.cput.entity;
 
-public class playerStats {
+public class PlayerStats {
 
     private String fixtureID;
     private String playerID;
@@ -20,7 +20,7 @@ public class playerStats {
     private int numberOfSavesMade;
 
 
-    public playerStats(Builder builder) {
+    public PlayerStats(Builder builder) {
         this.fixtureID = builder.fixtureID;
         this.playerID = builder.playerID;
         this.numberOfGoals = builder.numberOfGoals;
@@ -126,8 +126,8 @@ public class playerStats {
             return this;
         }
 
-        public playerStats build() {
-            return new playerStats(this);
+        public PlayerStats build() {
+            return new PlayerStats(this);
         }
 
     }
