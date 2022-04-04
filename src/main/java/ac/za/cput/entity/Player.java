@@ -1,6 +1,6 @@
 /**
  * Player Entity
- * player.java
+ * Player.java
  * Thina Mbiza 217217095
  * 31 March 2022
  */
@@ -19,17 +19,17 @@ public class Player {
     private int goals;
     private int assists;
 
-    public Player(Player.PlayerBuilder playerBuilder) {
-        this.playerId = playerBuilder.playerId;
-        this.teamId = playerBuilder.teamId;
-        this.firstName = playerBuilder.firstName;
-        this.middleName = playerBuilder.middleName;
-        this.lastName = playerBuilder.lastName;
-        this.age = playerBuilder.age;
-        this.position = playerBuilder.position;
-        this.team = playerBuilder.team;
-        this.goals = playerBuilder.goals;
-        this.assists = playerBuilder.assists;
+    public Player(Player.Builder Builder) {
+        this.playerId = Builder.playerId;
+        this.teamId = Builder.teamId;
+        this.firstName = Builder.firstName;
+        this.middleName = Builder.middleName;
+        this.lastName = Builder.lastName;
+        this.age = Builder.age;
+        this.position = Builder.position;
+        this.team = Builder.team;
+        this.goals = Builder.goals;
+        this.assists = Builder.assists;
     }
 
 
@@ -90,7 +90,7 @@ public class Player {
                 '}';
     }
 
-    public static class PlayerBuilder{
+    public static class Builder{
 
         private String playerId;
         private String teamId;
@@ -103,52 +103,52 @@ public class Player {
         private int goals;
         private int assists;
 
-        public Player.PlayerBuilder setPlayerId(String playerId) {
+        public Player.Builder setPlayerId(String playerId) {
             this.playerId = playerId;
             return this;
         }
 
-        public Player.PlayerBuilder setTeamId(String teamId) {
+        public Player.Builder setTeamId(String teamId) {
             this.teamId = teamId;
             return this;
         }
 
-        public Player.PlayerBuilder setFirstName(String firstName) {
+        public Player.Builder setFirstName(String firstName) {
             this.firstName = firstName;
             return this;
         }
 
-        public Player.PlayerBuilder setMiddleName(String middleName) {
+        public Player.Builder setMiddleName(String middleName) {
             this.middleName = middleName;
             return this;
         }
 
-        public Player.PlayerBuilder setLastName(String lastName) {
+        public Player.Builder setLastName(String lastName) {
             this.lastName = lastName;
             return this;
         }
 
-       public Player.PlayerBuilder setAge(int age) {
+       public Player.Builder setAge(int age) {
             this.age = age;
             return this;
         }
 
-        public Player.PlayerBuilder setPosition(int position) {
+        public Player.Builder setPosition(int position) {
             this.position = position;
             return this;
         }
 
-        public Player.PlayerBuilder setTeam(String team) {
+        public Player.Builder setTeam(String team) {
             this.team = team;
             return this;
         }
 
-        public Player.PlayerBuilder setGoals(int goals) {
+        public Player.Builder setGoals(int goals) {
             this.goals = goals;
             return this;
         }
 
-        public Player.PlayerBuilder setAssists(int assists) {
+        public Player.Builder setAssists(int assists) {
             this.assists = assists;
             return this;
         }

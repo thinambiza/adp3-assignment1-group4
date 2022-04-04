@@ -1,6 +1,6 @@
 /**
  * Group Entity
- * group.java
+ * Group.java
  * Thina Mbiza 217217095
  * 31 March 2022
  */
@@ -16,13 +16,13 @@ public class Group {
     private Team winner;
     private String teamLogs;
 
-    public Group(GroupBuilder groupBuilder) {
-        this.groupId = groupBuilder.groupId;
-        this.numOfTeams = groupBuilder.numOfTeams;
-        this.groupLetter = groupBuilder.groupLetter;
-        this.numOfFixtures = groupBuilder.numOfFixtures;
-        this.winner = groupBuilder.winner;
-        this.teamLogs = groupBuilder.teamLogs;
+    public Group(Builder Builder) {
+        this.groupId = Builder.groupId;
+        this.numOfTeams = Builder.numOfTeams;
+        this.groupLetter = Builder.groupLetter;
+        this.numOfFixtures = Builder.numOfFixtures;
+        this.winner = Builder.winner;
+        this.teamLogs = Builder.teamLogs;
     }
 
     public String getGroupId() {
@@ -61,7 +61,7 @@ public class Group {
                 '}';
     }
 
-    public static class GroupBuilder {
+    public static class Builder {
 
         private String groupId;
         private int numOfTeams;
@@ -71,32 +71,32 @@ public class Group {
         private String teamLogs;
 
 
-        public Group.GroupBuilder setGroupId(String groupId) {
+        public Group.Builder setGroupId(String groupId) {
             this.groupId = groupId;
             return this;
         }
 
-        public Group.GroupBuilder setNumOfTeams(int numOfTeams) {
+        public Group.Builder setNumOfTeams(int numOfTeams) {
             this.numOfTeams = numOfTeams;
             return this;
         }
 
-        public Group.GroupBuilder setGroupLetter(char groupLetter) {
+        public Group.Builder setGroupLetter(char groupLetter) {
             this.groupLetter = groupLetter;
             return this;
         }
 
-        public Group.GroupBuilder setNumOfFixtures(int numOfFixtures) {
+        public Group.Builder setNumOfFixtures(int numOfFixtures) {
             this.numOfFixtures = numOfFixtures;
             return this;
         }
 
-        public Group.GroupBuilder setWinner(Team winner) {
+        public Group.Builder setWinner(Team winner) {
             this.winner = winner;
             return this;
         }
 
-        public Group.GroupBuilder setTeamLogs(String teamLogs) {
+        public Group.Builder setTeamLogs(String teamLogs) {
             this.teamLogs = teamLogs;
             return this;
         }
