@@ -3,7 +3,7 @@ package ac.za.cput.repository;
 public interface IRepository<T, ID> {
     T create(T t);
 
-    T read(ID id);
+    T read(T t);
 
     T update(T t);
 
