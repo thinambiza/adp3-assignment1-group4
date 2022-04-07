@@ -126,6 +126,18 @@ public class Fixture {
             return this;
         }
 
+        public FixtureBuilder copy(Fixture fixture){
+            this.fixtureId = fixture.fixtureId;
+            this.groupId = fixture.groupId;
+            this.homeTeam = fixture.homeTeam;
+            this.awayTeam = fixture.awayTeam;
+            this.referee = fixture.referee;
+            this.stageType = fixture.stageType;
+            this.homeScore = fixture.homeScore;
+            this.awayScore = fixture.awayScore;
+            return this;
+        }
+
         public Fixture build(){
             return new Fixture(this);
         }
