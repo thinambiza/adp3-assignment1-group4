@@ -100,6 +100,16 @@ public class Referee {
             return this;
         }
 
+        public RefereeBuilder copy(Referee referee){
+            this.fixtureId = referee.fixtureId;
+            this.refereeId = referee.refereeId;
+            this.name = referee.name;
+            this.middleName = referee.middleName;
+            this.lastName = referee.lastName;
+            this.yearsOfExperience = referee.yearsOfExperience;
+            return this;
+        }
+
         public Referee build(){
             return new Referee(this);
         }

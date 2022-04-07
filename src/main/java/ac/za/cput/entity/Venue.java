@@ -100,6 +100,16 @@ public class Venue {
             return this;
         }
 
+        public VenueBuilder copy(Venue venue){
+            this.venueId = venue.venueId;
+            this.fixtureId = venue.fixtureId;
+            this.teamId = venue.teamId;
+            this.stadiumName = venue.stadiumName;
+            this.capacity = venue.capacity;
+            this.weather = venue.weather;
+            return this;
+        }
+
         public Venue build(){
             return new Venue(this);
         }
