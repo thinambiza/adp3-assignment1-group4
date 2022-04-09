@@ -1,4 +1,4 @@
-/*
+/**
  PlayerStats.java
  Entity for the PlayerStats
  Author: Zuko Fukula (217299911)
@@ -128,6 +128,15 @@ public class PlayerStats {
 
         public PlayerStats build() {
             return new PlayerStats(this);
+        }
+
+        public PlayerStats.Builder copy(PlayerStats playerStats) {
+            this.playerID = playerStats.playerID;
+            this.numberOfGoals = playerStats.numberOfGoals;
+            this.numberOfAppearances = playerStats.numberOfAppearances;
+            this.numberOfAssists = playerStats.numberOfAssists;
+
+            return this;
         }
 
     }
