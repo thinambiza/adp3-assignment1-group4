@@ -72,6 +72,14 @@ public class Tournament {
             return this;
         }
 
+        public Tournament.TournamentBuilder copy(Tournament tournamentBuilder){
+            this.tournamentId = tournamentBuilder.tournamentId;
+            this.tournamentName = tournamentBuilder.tournamentName;
+            this.tournamentType = tournamentBuilder.tournamentType;
+            this.numberOfTeams = tournamentBuilder.numberOfTeams;
+            return this;
+        }
+
         public Tournament build(){ return new Tournament(this);
         }
     }

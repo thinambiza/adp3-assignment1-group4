@@ -1,5 +1,5 @@
 /**
- * Tournament.java
+ * InGame Stats.java
  * InGame Stats Entity
  * Author: Melisa Bhixa 217131085
  * Date: 31 March 2022
@@ -159,6 +159,21 @@ public class InGameStats {
 
         public InGameStats.InGameStatsBuilder setTeamId(String teamId){
             this.teamId = teamId;
+            return this;
+        }
+
+        public InGameStats.InGameStatsBuilder copy(InGameStats inGameStats){
+            this.fixtureId = inGameStats.fixtureId;
+            this.numberOfCorners = inGameStats.numberOfCorners;
+            this.numberOfRedCards = inGameStats.numberOfRedCards;
+            this.numberOfFreeKicks = inGameStats.numberOfFreeKicks;
+            this.possession = inGameStats.possession;
+            this.numberOfShotsOnTarget = inGameStats.numberOfShotsOnTarget;
+            this.numberOfShots = inGameStats.numberOfShots;
+            this.numberOfPasses = inGameStats.numberOfPasses;
+            this.numberOfGoalsConceded = inGameStats.numberOfGoalsConceded;
+            this.numberOfGoalsScored = inGameStats.numberOfGoalsScored;
+            this.teamId = inGameStats.teamId;
             return this;
         }
 
