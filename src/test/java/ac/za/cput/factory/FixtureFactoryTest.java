@@ -5,7 +5,7 @@
  Date: 07 April 2022
  */
 
-package ac.za.cput.factory;
+package test;
 
 import ac.za.cput.entity.Fixture;
 import ac.za.cput.entity.Group;
