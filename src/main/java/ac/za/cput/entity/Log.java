@@ -1,4 +1,4 @@
-/*
+/**
  Log.java
  Entity for the Log
  Author: Zuko Fukula (217299911)
@@ -128,6 +128,14 @@ public class Log {
 
         public Log build() {
             return new Log(this);
+        }
+
+        public Log.Builder copy(Log log) {
+            this.logID = log.logID;
+            this.points = log.points;
+            this.position = log.position;
+
+            return this;
         }
 
         @Override

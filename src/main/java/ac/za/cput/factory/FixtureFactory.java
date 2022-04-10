@@ -10,11 +10,13 @@ package ac.za.cput.factory;
 import ac.za.cput.entity.Fixture;
 import ac.za.cput.entity.Referee;
 import ac.za.cput.entity.Team;
+import ac.za.cput.util.Helper;
 
 public class FixtureFactory {
 
-    public static Fixture createFixture(String fixtureId, String groupId, Team homeTeam, Team awayTeam, Referee referee, String stageType, int homeScore, int awayScore){
+    public static Fixture createFixture(String groupId, Team homeTeam, Team awayTeam, Referee referee, String stageType, int homeScore, int awayScore){
 
+        String fixtureId = Helper.generateID();
         return new Fixture.FixtureBuilder()
                 .setFixtureId(fixtureId)
                 .setGroupId(groupId)
