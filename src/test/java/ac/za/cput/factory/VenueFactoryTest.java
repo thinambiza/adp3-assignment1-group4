@@ -17,7 +17,7 @@ class VenueFactoryTest {
     @Test
     void createVenue() {
         Fixture fixture = FixtureFactory.createFixture(null, null, null, null, "", 0, 0);
-        Team team = TeamFactory.createTeam("Team-id", null, null, 0, 2020, null, null, null);
+        Team team = TeamFactory.createTeam(null, null, 0, 2020, null, null, null);
         String fixtureId = fixture.getFixtureId();
         String teamId = team.getTeamId();
 

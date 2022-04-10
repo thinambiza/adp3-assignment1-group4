@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class GroupRepositoryTest {
 
     private static GroupRepository repository = (GroupRepository) GroupRepository.getRepository();
-    private static Group group = GroupFactory.createGroup("B", 2, "P", 16, "Pirates", "T1");
+    private static Group group = GroupFactory.createGroup("B", 2, 'P', 16, null, "T1");
 
     @Test
     void create() {

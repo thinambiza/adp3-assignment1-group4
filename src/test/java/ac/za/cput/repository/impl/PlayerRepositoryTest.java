@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PlayerRepositoryTest {
 
     private static IPlayerRepository repository = (PlayerRepository) PlayerRepository.getRepository();
-    private static Player player = PlayerFactory.createPlayer("B", 2, "Thina", "Mosiea", "Mbiza", 25, 7,"Pirates", 10, 2);
+    private static Player player = PlayerFactory.createPlayer("B", "2", "Thina", "Mosiea", "Mbiza", 25, 7,"Pirates", 10, 2);
 
     @Test
     void create() {

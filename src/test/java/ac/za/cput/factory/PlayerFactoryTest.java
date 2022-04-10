@@ -20,14 +20,14 @@ class PlayerFactoryTest {
 
     @Test
     void createPlayer() {
-        Player player = PlayerFactory.createPlayer("B", 2, "Thina", "Mosiea", "Mbiza", 25, 7,"Pirates", 10, 2);
+        Player player = PlayerFactory.createPlayer("B", "2", "Thina", "Mosiea", "Mbiza", 25, 7,"Pirates", 10, 2);
         System.out.println(player);
     }
 
     @Test
     //Group Position equality test
     public void Position(){
-        Player player = PlayerFactory.createPlayer("B", 2, "Thina", "Mosiea", "Mbiza", 25, 7,"Pirates", 10, 2);
+        Player player = PlayerFactory.createPlayer("B", "2", "Thina", "Mosiea", "Mbiza", 25, 7,"Pirates", 10, 2);
         System.out.println("Position: "+player.getPosition());
         assertEquals(7,player.getPosition());
     }
@@ -46,7 +46,7 @@ class PlayerFactoryTest {
     @Disabled("Test Disabled")
     @Test
     public void testDisable(){
-        Group group = GroupFactory.createGroup("B", 2, "P", 16, "Pirates", "T1");
+        Group group = GroupFactory.createGroup("B", 2, 'P', 16, null, "T1");
         assertSame("Pirates",group.getWinner());
         //  org.junit.jupiter.api.Assertions.fail("This test should fail. Program still being developed");
     }

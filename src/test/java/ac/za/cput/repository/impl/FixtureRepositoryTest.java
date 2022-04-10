@@ -23,11 +23,9 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class FixtureRepositoryTest {
 
-    private static Team homeTeam = TeamFactory.createTeam("2132-452",
-            "Home Team Name", "156-456", 0, 2021, null, null, null);
+    private static Team homeTeam = TeamFactory.createTeam("Home Team Name", "156-456", 0, 2021, null, null, null);
 
-    private static Team awayTeam = TeamFactory.createTeam("2132-452",
-            "Away Team Name", "148-336", 1, 2021, null, null, null);
+    private static Team awayTeam = TeamFactory.createTeam("Away Team Name", "148-336", 1, 2021, null, null, null);
 
     private static Referee referee = RefereeFactory.createReferee("879-233",
             "John", "", "Lastname", 10);
