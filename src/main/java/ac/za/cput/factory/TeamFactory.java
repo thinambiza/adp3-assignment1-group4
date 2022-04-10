@@ -7,14 +7,15 @@
 
 package ac.za.cput.factory;
 import ac.za.cput.entity.Team;
-import ac.za.cput.entity.Manager;
-import ac.za.cput.entity.Player;
+import ac.za.cput.util.Helper;
+
 
 public class TeamFactory {
 
-    public static Team createTeam(String teamId, String teamName, String venueId, int numberOfTrophies,
-                                  int yearEstablished, Manager manager, Player captain, Player players){
+    public static Team createTeam(String venueId, String teamName,  int numberOfTrophies,
+                                  int yearEstablished, String manager, String captain, String players){
 
+        String teamId = Helper.generateID();
         return new Team.Builder()
                 .setTeamId(teamId)
                 .setTeamName(teamName)

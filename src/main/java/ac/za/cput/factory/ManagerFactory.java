@@ -7,12 +7,14 @@
 
 package ac.za.cput.factory;
 import ac.za.cput.entity.Manager;
+import ac.za.cput.util.Helper;
 
 public class ManagerFactory {
 
-    public static Manager createManager(String managerId, String teamId, String firstName,
-                                        int age, int yearsOfExperience, int middleName, int lastName){
+    public static Manager createManager( String teamId, String firstName,
+                                        int age, int yearsOfExperience, String middleName, String lastName){
 
+        String managerId = Helper.generateID();
         return new Manager.Builder()
                 .setManagerId(managerId)
                 .setTeamId(teamId)

@@ -13,8 +13,8 @@ public class Manager {
     private String firstName;
     private int age;
     private int yearsOfExperience;
-    private int middleName;
-    private int lastName;
+    private String middleName;
+    private String lastName;
 
     public Manager(Builder Builder) {
         this.managerId = Builder.managerId;
@@ -46,11 +46,11 @@ public class Manager {
         return yearsOfExperience;
     }
 
-    public int getMiddleName() {
+    public String getMiddleName() {
         return middleName;
     }
 
-    public int getLastName() {
+    public String getLastName() {
         return lastName;
     }
 
@@ -73,8 +73,8 @@ public class Manager {
         private String firstName;
         private int age;
         private int yearsOfExperience;
-        private int middleName;
-        private int lastName;
+        private String middleName;
+        private String lastName;
 
         public Builder setManagerId(String managerId) {
             this.managerId = managerId;
@@ -101,20 +101,25 @@ public class Manager {
             return this;
         }
 
-        public Builder setMiddleName(int middleName) {
+        public Builder setMiddleName(String middleName) {
             this.middleName = middleName;
             return this;
         }
 
-        public Builder setLastName(int lastName) {
+        public Builder setLastName(String lastName) {
             this.lastName = lastName;
             return this;
         }
+
         public Manager build() {
             return new Manager(this);
         }
 
+        public Builder copy(Manager manager) {
+            return this;
+        }
     }
 }
+
 
 

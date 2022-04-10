@@ -13,9 +13,9 @@ public class Team {
     private String venueId;
     private int numberOfTrophies;
     private int yearEstablished;
-    private Manager manager;
-    private Player captain;
-    private Player players;
+    private String manager;
+    private String captain;
+    private String players;
 
     public Team(Builder Builder) {
         this.teamId = Builder.teamId;
@@ -48,15 +48,15 @@ public class Team {
         return yearEstablished;
     }
 
-    public Manager getManager() {
+    public String getManager() {
         return manager;
     }
 
-    public Player getCaptain() {
+    public String getCaptain() {
         return captain;
     }
 
-    public Player getPlayers() {
+    public String getPlayers() {
         return players;
     }
 
@@ -80,9 +80,9 @@ public class Team {
         private String venueId;
         private int numberOfTrophies;
         private int yearEstablished;
-        private Manager manager;
-        private Player captain;
-        private Player players;
+        private String manager;
+        private String captain;
+        private String players;
 
         public Builder setTeamId(String teamId) {
             this.teamId = teamId;
@@ -109,22 +109,26 @@ public class Team {
             return this;
         }
 
-        public Builder setManager(Manager manager) {
+        public Builder setManager(String manager) {
             this.manager = manager;
             return this;
         }
 
-        public Builder setCaptain(Player captain) {
+        public Builder setCaptain(String captain) {
             this.captain = captain;
             return this;
         }
 
-        public Builder setPlayers(Player players) {
+        public Builder setPlayers(String players) {
             this.players = players;
             return this;
         }
         public Team build() {
             return new Team (this);
+        }
+
+        public Builder copy(Team team) {
+            return this;
         }
     }
 }
