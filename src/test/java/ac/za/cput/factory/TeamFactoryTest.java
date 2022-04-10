@@ -45,5 +45,4 @@ void createTeam(){
         @Test void testDisabled(){
                 assertNotNull(team2);
         }
-        //test
 }
