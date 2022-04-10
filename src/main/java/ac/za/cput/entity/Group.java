@@ -101,6 +101,16 @@ public class Group {
             return this;
         }
 
+        public Builder copy(Group group){
+            this.groupId = group.groupId;
+            this.numOfTeams = group.numOfTeams;
+            this.groupLetter = group.groupLetter;
+            this.numOfFixtures = group.numOfFixtures;
+            this.winner = group.winner;
+            this.teamLogs = group.teamLogs;
+            return this;
+        }
+
         public Group build(){
             return new Group(this);
         }

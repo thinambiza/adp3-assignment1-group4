@@ -153,6 +153,20 @@ public class Player {
             return this;
         }
 
+        public Builder copy(Player player){
+            this.playerId = player.playerId;
+            this.teamId = player.teamId;
+            this.firstName = player.firstName;
+            this.middleName = player.middleName;
+            this.lastName = player.lastName;
+            this.age = player.age;
+            this.position = player.position;
+            this.team = player.team;
+            this.goals = player.goals;
+            this.assists = player.assists;
+            return this;
+        }
+
         public Player build(){
             return new Player(this);
         }

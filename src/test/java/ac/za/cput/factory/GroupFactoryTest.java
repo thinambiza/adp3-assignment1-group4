@@ -23,14 +23,14 @@ class GroupFactoryTest {
 
     @Test
     void createGroup() {
-        Group group = GroupFactory.createGroup("B", 2, "P", 16, "Pirates", "T1");
+        Group group = GroupFactory.createGroup("B", 2, 'P', 16, null, "T1");
         System.out.println(group);
     }
 
     @Test
     //Group Winner equality test
     public void Winner(){
-        Group group = GroupFactory.createGroup("B", 2, "P", 16, "Pirates", "T1");
+        Group group = GroupFactory.createGroup("B", 2, 'P', 16, null, "T1");
         System.out.println("Winner: "+group.getWinner());
         assertEquals("Pirates",group.getWinner());
     }
@@ -49,7 +49,7 @@ class GroupFactoryTest {
     @Disabled("Test Disabled")
     @Test
     public void testDisable(){
-        Group group = GroupFactory.createGroup("B", 2, "P", 16, "Pirates", "T1");
+        Group group = GroupFactory.createGroup("B", 2, 'P', 16, null, "T1");
         assertSame("Pirates",group.getWinner());
       //  org.junit.jupiter.api.Assertions.fail("This test should fail. Program still being developed");
         }
