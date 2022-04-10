@@ -7,6 +7,7 @@
 
 package ac.za.cput.repository.impl;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ac.za.cput.entity.Manager;
@@ -41,20 +42,20 @@ class ManagerRepositoryTest {
         System.out.println("Created\n" + repository.read(manager.getManagerId()));
     }
 
-//    @Test
-//    public void read() {
-//            assertNotNull(managerRepository.read(manager.getManagerId()));
-//            System.out.println(managerRepository.read(manager.getManagerId()));
-//        }
+    @Test
+    public void read() {
+            assertNotNull(managerRepository.read(manager.getManagerId()));
+            System.out.println(managerRepository.read(manager.getManagerId()));
+        }
 
-//    @Test
-//    public void update() {
-//        System.out.println("Before update: " + manager.toString());
-//        Manager updated = new Manager.Builder().copy(manager).setLastName("Muinzani").setYearsOfExperience(10).build();
-//        Manager updatedManager = repository.update(updated);
-//        Assertions.assertEquals("Muinzani", updatedManager.getLastName());
-//        System.out.println("Updated: "+ updatedManager);
-//    }
+    @Test
+    public void update() {
+        System.out.println("Before update: " + manager.toString());
+        Manager updated = new Manager.Builder().copy(manager).setLastName("Muinzani").setYearsOfExperience(10).build();
+        Manager updatedManager = repository.update(updated);
+        Assertions.assertEquals("Muinzani", updatedManager.getLastName());
+        System.out.println("Updated: "+ updatedManager);
+    }
 
     @Test
     public void delete() {
