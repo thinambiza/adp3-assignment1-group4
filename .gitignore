@@ -5,6 +5,6 @@
 *.class
 
 # Log file
-*.log
+*.teamStats
 
 out/
