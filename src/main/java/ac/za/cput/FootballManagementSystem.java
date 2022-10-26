@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 @AutoConfiguration
 public class FootballManagementSystem {
-
     public static void main(String[] args) {
         SpringApplication.run(FootballManagementSystem.class, args);
     }
