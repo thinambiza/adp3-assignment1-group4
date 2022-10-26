@@ -1,12 +1,23 @@
-/*
- * Player Factory
- * PlayerFactory.java
- * Thina Mbiza 217217095
- * 4 April 2022
+/**
+ * Venue Factory
+ * VenueFactory.java
+ * Author: Thina Mbiza 217217095
+ * Date 31 March 2022
  */
+package ac.za.cput.factory.game;
 
 
-package ac.za.cput.factory.personal;
+import ac.za.cput.domain.game.Venue;
+import ac.za.cput.util.Helper;
 
-public class PlayerFactory {
+public class VenueFactory {
+    public static Venue newVenue(String vName, int capacity){
+        String id = "vn-"+ Helper.generateId();
+
+        return new Venue.Builder()
+                .setId(id)
+                .setVenueName(vName)
+                .setCapacity(capacity)
+                .build();
+    }
 }
