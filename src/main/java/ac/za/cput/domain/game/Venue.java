@@ -1,13 +1,7 @@
-﻿/**
- Venue.java
- Entity for the Venue
- * Author: Thina Mbiza 217217095
- * Date 18 October 2022
- */
-
-package ac.za.cput.domain.game;
+﻿package ac.za.cput.domain.game;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
