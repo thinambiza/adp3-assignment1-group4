@@ -27,8 +27,8 @@ public class TeamController {
     }
 
     @GetMapping("/fms/team/{teamId}")
-    public Team getTeamById(@PathVariable String teamId){
-        return (Team) service.getTeamById(teamId);
+    public List<Team> getTeamById(@PathVariable(required = false) String teamId){
+        return service.getTeamById(teamId);
     }
 
     @GetMapping("/fms/tournament/{tournamentId}/team")

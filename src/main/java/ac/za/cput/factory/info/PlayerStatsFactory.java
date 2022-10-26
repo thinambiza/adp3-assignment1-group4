@@ -11,10 +11,14 @@ import ac.za.cput.domain.info.PlayerStats;
 import ac.za.cput.util.Helper;
 
 public class PlayerStatsFactory {
-    public static PlayerStats newPlayerStats(int goals, int assists, int saves){
+    public static PlayerStats newPlayerStat(String playerId, String playerName, String fixtureId, String teamId, int goals, int assists, int saves){
         String id = "pls-"+Helper.generateId();
         return new PlayerStats.Builder()
                 .setId(id)
+                .setPlayerId(playerId)
+                .setPlayerName(playerName)
+                .setFixtureId(fixtureId)
+                .setTeamId(teamId)
                 .setGoalsScored(goals)
                 .setAssistsMade(assists)
                 .setGoalsSaved(saves)

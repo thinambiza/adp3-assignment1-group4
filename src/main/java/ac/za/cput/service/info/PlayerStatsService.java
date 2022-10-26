@@ -56,28 +56,6 @@ public class PlayerStatsService {
 
     * */
 
-    public List<PlayerStats> getPlayerStatsById(String playerStatsId){
-        if (null != playerStatsId){
-            return repository.findAllById(Collections.singleton(playerStatsId));
-        }
-        else {
-            return repository.findAll();
-        }
-    }
-
-    public List<PlayerStats> getAllPlayerStats(){
-        List<PlayerStats> playerStats = new ArrayList<>();
-        Streamable.of(repository.findAll())
-                .forEach(playerStats::add);
-        return playerStats;
-    }
-
-    public Set<PlayerStats> getFixtureTeamPlayerStats(String fixtureId, String teamId){
-        return repository.getPlayerStatsByFixtureIdAndTeamId(fixtureId, teamId);
-    }
-    public void deletePlayerStatsById(String id){
-        repository.deleteById(id);
-    }
     public void updatePlayerStatGoalPlusOneById(String tour, String fix, String game, String teamId, String playerId, String playerStatId){
 
         Tournament tournament = tournamentRepository.findById(tour).get();
@@ -88,4 +66,9 @@ public class PlayerStatsService {
         PlayerStats playerStat = playerStatsRepository.findById(playerId).get();
 
     }
+
+    public Set<PlayerStats> getFixtureTeamPlayerStats(String fixtureId, String teamId){
+        return repository.getPlayerStatsByFixtureIdAndTeamId(fixtureId, teamId);
+    }
+
 }

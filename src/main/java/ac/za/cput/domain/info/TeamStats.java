@@ -26,6 +26,7 @@ public class TeamStats {
     private String id;
     private String teamId;
     private String teamName;
+    private String tournamentId;
     private int points;
     private int gamesPlayed;
     private int goalsFor;
@@ -42,6 +43,7 @@ public class TeamStats {
     public TeamStats(Builder builder) {
         this.id = builder.id;
         this.teamId = builder.teamId;
+        this.tournamentId = builder.tournamentId;
         this.teamName = builder.teamName;
         this.points = builder.points;
         this.gamesPlayed = builder.gamesPlayed;;
@@ -54,6 +56,7 @@ public class TeamStats {
 
         private String id;
         private String teamId;
+        private String tournamentId;
         private String teamName;
         private int points;
         private int gamesPlayed;
@@ -68,6 +71,11 @@ public class TeamStats {
 
         public Builder setTeamId(String teamId) {
             this.teamId = teamId;
+            return this;
+        }
+
+        public Builder setTournamentId(String tournamentId) {
+            this.tournamentId = tournamentId;
             return this;
         }
 
@@ -103,6 +111,7 @@ public class TeamStats {
 
         public Builder copy(TeamStats teamStats){
             this.id = teamStats.id;
+            this.tournamentId = tournamentId;
             this.teamId = teamStats.teamId;
             this.teamName = teamStats.teamName;
             this.points = teamStats.points;
