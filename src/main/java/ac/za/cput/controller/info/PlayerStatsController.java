@@ -15,6 +15,7 @@ import ac.za.cput.domain.info.PlayerStats;
 import ac.za.cput.service.info.PlayerStatsService;
 
 import java.util.List;
+import java.util.Set;
 
 @RestController
 public class PlayerStatsController {
@@ -36,6 +37,11 @@ public class PlayerStatsController {
     @PostMapping("/fms/playerStats/save")
     public PlayerStats save(@RequestBody PlayerStats playerStats){
         return service.save(playerStats);
+    }
+
+    @GetMapping("/fms/fixture/{fixtureId}/team/{teamId}/player-stats")
+    public Set<PlayerStats> getFixtureTeamPlayerStats(@PathVariable String fixtureId, @PathVariable String teamId){
+        return service.getFixtureTeamPlayerStats(fixtureId, teamId);
     }
 
    /* @PostMapping("/update")

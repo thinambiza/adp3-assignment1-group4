@@ -52,4 +52,15 @@ public class RefereeService {
         }
     }
 
+    public Referee updateReferee(String id, String fistName, String middleName, String lastName){
+        Referee referee = repository.findById(id).get();
+
+        referee.setFirstName(fistName);
+        referee.setMiddleName(middleName);
+        referee.setLastName(lastName);
+
+        repository.save(referee);
+        return referee;
+    }
+
 }

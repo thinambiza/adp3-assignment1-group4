@@ -16,4 +16,5 @@ import java.util.Set;
 @Repository
 public interface PlayerStatsRepository extends JpaRepository<PlayerStats, String> {
     Set<PlayerStats> getPlayerStatsByFixtureIdAndTeamId(String fixtureId, String teamId);
+    PlayerStats getPlayerStatsByFixtureIdAndPlayerId(String fixtureId, String playerId);
 }
