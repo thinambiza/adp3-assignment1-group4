@@ -21,6 +21,7 @@ import ac.za.cput.repository.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class PlayerStatsService {
@@ -71,6 +72,9 @@ public class PlayerStatsService {
         return playerStats;
     }
 
+    public Set<PlayerStats> getFixtureTeamPlayerStats(String fixtureId, String teamId){
+        return repository.getPlayerStatsByFixtureIdAndTeamId(fixtureId, teamId);
+    }
     public void deletePlayerStatsById(String id){
         repository.deleteById(id);
     }

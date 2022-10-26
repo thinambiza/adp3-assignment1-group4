@@ -44,4 +44,9 @@ public class RefereeController {
         return new ResponseEntity(HttpStatus.OK);
     }
 
+
+    @PatchMapping("/fms/referee/{refereeId}/update")
+    public Referee updateReferee(@PathVariable String refereeId, String fName, String mName, String lName){
+        return service.updateReferee(refereeId, fName, mName, lName);
+    }
 }
