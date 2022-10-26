@@ -14,6 +14,8 @@ import ac.za.cput.domain.info.GameStats;
 import ac.za.cput.domain.info.PlayerStats;
 import ac.za.cput.domain.personal.Player;
 import ac.za.cput.domain.personal.Referee;
+import ac.za.cput.factory.info.GameStatsFactory;
+import ac.za.cput.factory.info.PlayerStatsFactory;
 import ac.za.cput.repository.*;
 import ac.za.cput.service.info.PlayerStatsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,7 +81,7 @@ public class FixtureService {
         players.forEach(player -> {
             String id = player.getId();
             String playerName = player.getFirstName()+" "+player.getLastName();
-            PlayerStats playerStats = PlayerStatFactory.newPlayerStat(id, fixtureId, teamId, playerName, 0,0,0);
+            PlayerStats playerStats = PlayerStatsFactory.newPlayerStat(id, fixtureId, teamId, playerName, 0,0,0);
             playerStatsService.save(playerStats);
             addPlayerStatToFixture(fixtureId, playerStats.getId());
             player.setPlayerPlayerStats(Collections.singleton(playerStats));
@@ -92,7 +94,7 @@ public class FixtureService {
         Set<GameStats> gameStatsSet = null;
         String teamName = teamRepository.findById(teamId).get().getTeamName();
 
-        GameStats gameStats = GameStatFactory.newGameStat(teamId, fixtureId, teamName,0,0,0,0,0,0);
+        GameStats gameStats = GameStatsFactory.newGameStats(teamId, fixtureId, teamName,0,0,0,0,0,0);
         gameStatsRepository.save(gameStats);
 
         Fixture fixture = repository.findById(fixtureId).get();
