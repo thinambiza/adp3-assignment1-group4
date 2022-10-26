@@ -1,3 +1,10 @@
+/**
+ RefereeRepository.java
+ Repository for Referee
+ Author: Zuko Fukula (217299911)
+ Date: 17 October 2022
+ */
+
 package ac.za.cput.repository;
 
 import ac.za.cput.domain.personal.Referee;
