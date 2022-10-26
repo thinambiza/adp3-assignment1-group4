@@ -8,10 +8,8 @@
 package ac.za.cput.domain.game;
 
 import ac.za.cput.domain.info.TeamStats;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import za.ac.cput.fms.domain.info.TeamStats;
 
 import javax.persistence.*;
 import java.util.HashSet;

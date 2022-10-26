@@ -9,4 +9,5 @@ import java.util.Set;
 @Repository
 public interface TeamStatsRepository extends JpaRepository<TeamStats, String> {
     Set<TeamStats> findByTeamId(String teamId);
+    TeamStats getTeamStatsByTeamIdAndTournamentId(String teamId, String tournamentId);
 }
